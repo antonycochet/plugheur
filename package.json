@@ -40,7 +40,9 @@
     "dev:server:nodemon": "rm -f build/server.js && wait-on -l build/server.js && nodemon build/server.js",
     "build": "yarn build:client && yarn build:backend",
     "build:client": "react-scripts build",
-    "build:server": "webpack --config webpack.config.server.js"
+    "build:server": "webpack --config webpack.config.server.js",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
@@ -62,8 +64,12 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
     "autoprefixer": "^10.4.8",
+    "eslint": "^8.21.0",
     "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8"
   }
 }
