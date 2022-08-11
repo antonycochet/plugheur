@@ -33,7 +33,7 @@ export const ChartMeter = ({ chartData, isSplited }: chartMeterProps) => {
     }
   };
 
-  const generateChartData = (): any => {
+  const generateChartData = () => {
     return {
       labels,
       datasets: [
@@ -51,7 +51,7 @@ export const ChartMeter = ({ chartData, isSplited }: chartMeterProps) => {
     };
   };
 
-  const generateChartDataWh = (): any => {
+  const generateChartDataWh = () => {
     return {
       labels,
       datasets: [
@@ -64,7 +64,7 @@ export const ChartMeter = ({ chartData, isSplited }: chartMeterProps) => {
     };
   };
 
-  const generateChartDataVarh = (): any => {
+  const generateChartDataVarh = () => {
     return {
       labels,
       datasets: [
